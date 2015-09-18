@@ -31,3 +31,15 @@ kiiService.getAdminToken(CLIENT_ID, CLIENT_SECRET, function (err, data) {
 	console.log(data);
 });
 ```
+
+## Safe create and update
+
+```
+kiiService.safeCreateObject('Account', params, function (err, data) {
+	...
+});
+
+KiiService.safeUpdateObject('Account', objectId, params, function (err, data) {
+	...
+});
+```
