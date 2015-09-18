@@ -4,7 +4,7 @@ var APP_ID = '',
 	CLIENT_SECRET = '';
 
 var path = require('path'),
-	Kii = require('../lib/kii-service');
+	Kii = require('../lib/kii-service'),
 	kiiService = new Kii(APP_ID, APP_KEY);
 
 // Load schemas
