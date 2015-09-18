@@ -1,26 +1,26 @@
 # node-kii-service
 kii backend management in nodejs 
 
-# How to use
+## How to use
 
 ```
 npm install node-kii-service
 ```
 
-# Require modules
+## Require modules
 
 ```
 var Kii = require('node-kii-service'),
 	kiiService = new Kii(APP_ID, APP_KEY);
 ```
 
-# Load schema
+## Load schema
 
 ```
 kiiService.loadSchemas(path.join(__dirname, 'schemas'));
 ```
 
-# Set admin token
+## Set admin token
 
 ```
 kiiService.setAdminToken(ADMIN_ACCESS_TOKEN);
