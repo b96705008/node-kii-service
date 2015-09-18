@@ -1,1 +1,1 @@
-module.exports = require('./kii-service');
+module.exports = require('./lib/kii-service');
