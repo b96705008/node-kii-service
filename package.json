@@ -15,5 +15,10 @@
     "is-my-json-valid": "^2.12.1",
     "kii-cloud-sdk": "git+https://github.com/b96705008/KiiCloudSDK-JS.git#785b22932d8ede2486a68172ae0736fc48fdb92c",
     "lodash": "^3.10.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b96705008/node-kii-service.git"
+  },
+  "homepage": "https://github.com/b96705008/node-kii-service"
 }
