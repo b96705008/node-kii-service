@@ -50,3 +50,23 @@ kiiService.dowloadObject('FileBucket', 'ObjectID', tmpPath, function (err) {
 		console.log('download to', tmpPath);
 	}
 });
+
+/*
+ * Query Users
+ */
+var queryBody = {
+	userQuery: {
+		clause: {
+			type: 'in',
+			field: 'loginName', 
+			values: ['a', 'b']
+		}, 
+		orderBy: 'createdAt',
+		descending: true	
+	}
+};
+
+kiiService.queryUsers(queryBody, function (err, data) {
+	console.log(err || data);
+});
+
