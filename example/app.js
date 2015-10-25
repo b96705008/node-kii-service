@@ -38,35 +38,50 @@ kiiService.setAdminToken(kiiConf.ADMIN_ACCESS_TOKEN);
 // 	console.log(err || data);
 // });
 
+kiiService.queryObjsByCond('ProfileImage', {
+	bestEffortLimit: 5,
+	paginationKey: '200/5',
+	orderBy: '-_created'
+}, function (err, data) {
+	console.log(err || data);
+});
+
 /*
  * Dowload Object
  */
 var tmpPath = require('path').join(__dirname, 'tmp', 'file');
 
-kiiService.dowloadObject('FileBucket', 'ObjectID', tmpPath, function (err) {
-	if (err) {
-		console.error(err);
-	} else {
-		console.log('download to', tmpPath);
-	}
-});
+// kiiService.dowloadObject('FileBucket', 'ObjectID', tmpPath, function (err) {
+// 	if (err) {
+// 		console.error(err);
+// 	} else {
+// 		console.log('download to', tmpPath);
+// 	}
+// });
 
 /*
  * Query Users
  */
-var queryBody = {
-	userQuery: {
-		clause: {
-			type: 'in',
-			field: 'loginName', 
-			values: ['a', 'b']
-		}, 
-		orderBy: 'createdAt',
-		descending: true	
-	}
-};
+// var queryBody = {
+// 	userQuery: {
+// 		clause: {
+// 			type: 'in',
+// 			field: 'loginName', 
+// 			values: ['a', 'b']
+// 		}, 
+// 		orderBy: 'createdAt',
+// 		descending: true	
+// 	}
+// };
 
-kiiService.queryUsers(queryBody, function (err, data) {
-	console.log(err || data);
-});
+// kiiService.queryUsers(queryBody, function (err, data) {
+// 	console.log(err || data);
+// });
+
+
+// kiiService.queryUsersByCond({
+// 	loginName: ['a', 'b']
+// }, function (err, data) {
+// 	console.log(err || data);
+// });
 
