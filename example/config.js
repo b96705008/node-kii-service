@@ -1,5 +1,5 @@
 /**
- * Kii WME APP
+ * Kii APP info
  */
 module.exports = {
 	APP_ID: '',
