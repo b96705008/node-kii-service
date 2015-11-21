@@ -107,11 +107,23 @@ kiiService.setAdminToken(kiiConf.ADMIN_ACCESS_TOKEN);
 /**
  * Save obj
  */
-kiiService.saveObject('FriendRequest', {
-	from: 'Roger',
-	to: 'Marry',
-	message: 'Hello'
+// kiiService.saveObject('FriendRequest', {
+// 	from: 'Roger',
+// 	to: 'Marry',
+// 	message: 'Hello'
+// }, function (err, data) {
+// 	console.log(err || data);
+// });
+
+kiiService.findOne('FriendRequest', {
+	from: 'a',
+	to: 'b'
 }, function (err, data) {
 	console.log(err || data);
 });
 
+kiiService.findAll('FriendRequest', {
+	from: 'a'
+}, function (err, data) {
+	console.log(err || data);
+});
