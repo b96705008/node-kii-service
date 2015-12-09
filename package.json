@@ -1,13 +1,12 @@
 {
   "name": "node-kii-service",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "kii clould backend service management",
   "author": "Tai-Yi Kuo <tykuo@himelight.com>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "async": "^1.4.2",
