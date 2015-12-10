@@ -1,6 +1,6 @@
 {
   "name": "node-kii-service",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "kii clould backend service management",
   "author": "Tai-Yi Kuo <tykuo@himelight.com>",
   "main": "index.js",
