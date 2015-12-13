@@ -115,15 +115,19 @@ kiiService.setAdminToken(kiiConf.ADMIN_ACCESS_TOKEN);
 // 	console.log(err || data);
 // });
 
-kiiService.findOne('FriendRequest', {
-	from: 'a',
-	to: 'b'
-}, function (err, data) {
-	console.log(err || data);
-});
+// kiiService.findOne('FriendRequest', {
+// 	from: 'a',
+// 	to: 'b'
+// }, function (err, data) {
+// 	console.log(err || data);
+// });
 
-kiiService.findAll('FriendRequest', {
-	from: 'a'
-}, function (err, data) {
-	console.log(err || data);
+// kiiService.findAll('FriendRequest', {
+// 	from: 'a'
+// }, function (err, data) {
+// 	console.log(err || data);
+// });
+
+kiiService.deleteObject('Account', '123', function (err) {
+	console.log(err || 'success');
 });

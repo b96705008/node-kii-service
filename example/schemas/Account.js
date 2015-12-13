@@ -17,5 +17,10 @@ module.exports = {
 			type: 'string'
 		}
 	},
-	additionalProperties: false
+	additionalProperties: false,
+
+	deletePreHook: function (objectID, next) {
+		console.log(objectID);
+		next();
+	}
 };
