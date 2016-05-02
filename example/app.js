@@ -77,10 +77,24 @@ kiiService.setAdminToken(kiiConf.ADMIN_ACCESS_TOKEN);
 // kiiService.queryObjsByCond('ProfileImage', {
 // 	bestEffortLimit: 5,
 // 	paginationKey: '200/5',
-// 	orderBy: '-_created'
+// 	//orderBy: '-time',
+// 	name: 'wpwmimi'
+// 	//time: ['$gtn:1461694952', '$ltn:1461857270']
 // }, function (err, data) {
 // 	console.log(err || data);
 // });
+
+kiiService.findAll('ProfileImage', {
+	//bestEffortLimit: 5,
+	//paginationKey: '200/5'
+	orderBy: '-time',
+	MD5: 'xxxxxxxxx',
+	name: '$ne:xxxxx', //$ne
+	time: ['$gtn:1461694952', '$lt:1461857270'] //$gt, $gtn, $lt, $ltn
+	//time: ['$gtn:1461855327', '$lt:1434945764']
+}, function (err, data) {
+	console.log(err || data);
+});
 
 /**
  * Dowload Object
@@ -128,6 +142,6 @@ kiiService.setAdminToken(kiiConf.ADMIN_ACCESS_TOKEN);
 // 	console.log(err || data);
 // });
 
-kiiService.deleteObject('Account', '123', function (err) {
-	console.log(err || 'success');
-});
+// kiiService.deleteObject('Account', '123', function (err) {
+// 	console.log(err || 'success');
+// });
