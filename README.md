@@ -43,3 +43,16 @@ KiiService.safeUpdateObject('Account', objectId, params, function (err, data) {
 	...
 });
 ```
+
+## Query with operator ($gt, $gtn, $lt, $ltn, $ne)
+```
+kiiService.findAll('ProfileImage', {
+	orderBy: '-time',
+	MD5: 'xxxxxxxxx',
+	name: '$ne:MyPhoto', // not "Myphoto"
+	time: ['$gtn:1461694952', '$lt:1461857270'] // Range operator: 1461694952 <= time < 1461857270
+	...											// url query: ?time=$gtn:1461694952&time=$lt:1461857270
+}, function (err, data) {
+	console.log(err || data);
+});
+```
